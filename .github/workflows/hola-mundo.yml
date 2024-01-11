@@ -1,18 +1,20 @@
 name: Hola_Mundo_Python_Example
-
+run-name: learning work flow
 on:
   push:
     branches: [ "aprendiendo-github-actions" ]
 
 jobs:
-  build:
+  build-hola-mundo:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: env variable
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Set Up Python 3.10
         uses: actions/setup-python@v3
         with:
           python-version: "3.10"
-          
       - name: Run Script
         run: python3 main.py
