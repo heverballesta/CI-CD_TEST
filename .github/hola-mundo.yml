@@ -1,0 +1,18 @@
+name: Hola_Mundo_Python_Example
+
+on:
+  push:
+    branches: [ "aprendiendo-github-actions" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set Up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+          
+      - name: Run Script
+        run: python3 main.py
