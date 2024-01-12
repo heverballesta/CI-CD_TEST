@@ -21,8 +21,8 @@ jobs:
         run: echo ${{ inputs.nombre }} es mayor de edad
   menor:
     if: ${{ inputs.edad < 18 }}
-      runs-on: ubuntu-latest
-      steps:
-        - name: Correr Script
-          run: echo ${{ inputs.nombre }} es menor de edad
+    runs-on: ubuntu-latest
+    steps:
+      - name: Correr Script
+        run: echo ${{ inputs.nombre }} es menor de edad
       
