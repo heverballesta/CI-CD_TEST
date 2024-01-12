@@ -11,22 +11,22 @@ on:
   issues:
     types:
       - labeled
-  workflow_dispatch:
-    inputs:
-      lenguaje_favorito:
-        description: 'Lengiaje Favorito'
-        default: Python
-        required: true
-        type: choice
-        options:
-        - Python
-        - JavaScript
-        - Go
-      nombre:
-        description: 'Tu nombre'
-        required: true
-        default: Hever
-        type: string
+  # workflow_dispatch:
+  #   inputs:
+  #     lenguaje_favorito:
+  #       description: 'Lengiaje Favorito'
+  #       default: Python
+  #       required: true
+  #       type: choice
+  #       options:
+  #       - Python
+  #       - JavaScript
+  #       - Go
+  #     nombre:
+  #       description: 'Tu nombre'
+  #       required: true
+  #       default: Hever
+  #       type: string
 jobs:
   hola-mundo-manual:
     runs-on: ubuntu-latest
