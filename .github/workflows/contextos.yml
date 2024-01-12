@@ -1,0 +1,11 @@
+name: Context
+run-name: context-handling
+on:
+  push:
+
+jobs:
+  check-main:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Desplegando en la rama $GITHUBREF en el repositorio ${{ github.repository }}" 
